@@ -60,6 +60,7 @@ DEPENDENCIES
   pdf-parser!
   rake (~> 10.0)
   rspec
+  simplecov
 
 BUNDLED WITH
    1.16.1

@@ -7,6 +7,8 @@ gem 'origami'
 gem 'nokogiri'
 gem 'coveralls', require: false
 gem 'dotenv'
+gem 'simplecov', :require => false, :group => :test
+
 
 # Specify your gem's dependencies in pdf-parser.gemspec
 gemspec
