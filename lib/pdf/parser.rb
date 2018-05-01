@@ -1,4 +1,6 @@
 require "pdf/parser/version"
+require 'dotenv'
+Dotenv.load
 
 module Pdf
   module Parser
