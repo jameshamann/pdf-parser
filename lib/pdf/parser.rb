@@ -19,7 +19,7 @@ module Pdf
       val = string.string_between_markers('<xfa:data\n>', '</Form\n>')
       final = val.gsub('\n','')
       xml = Nokogiri::XML(final).to_xml
-      doc = Nokogiri::XML(xml)
+      return xml
     end
   end
 end
