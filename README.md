@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/jameshamann/pdf-parser/badge.svg?branch=master)](https://coveralls.io/github/jameshamann/pdf-parser?branch=master)
 [![CircleCI](https://circleci.com/gh/jameshamann/pdf-parser.svg?style=svg)](https://circleci.com/gh/jameshamann/pdf-parser)
 
-This RubyGem is intended to be used with Adobe XFA/Acroform PDFs and relies heavily on both  [Nokogiri](https://github.com/sparklemotion/nokogiri) and [Origami](https://github.com/gdelugre/origami)
+This RubyGem is intended to be used with Adobe XFA/Acroform PDFs and relies heavily on both  [Nokogiri](https://github.com/sparklemotion/nokogiri) and [Origami](https://github.com/gdelugre/origami).
 
 
 ## Installation
@@ -62,16 +62,16 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/pdf-parser. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jameshamann/pdf-parser. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## Changelog
+## [Changelog](https://github.com/jameshamann/pdf-parser/blob/master/CHANGELOG.md)
 
 
 
 ## Code of Conduct
 
-Everyone interacting in the Pdf::Parser project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/pdf-parser/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Pdf::Parser project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/jameshamann/pdf-parser/blob/master/CODE_OF_CONDUCT.md).

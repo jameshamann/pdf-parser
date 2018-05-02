@@ -9,19 +9,13 @@ Gem::Specification.new do |spec|
   spec.authors       = ["James Hamann"]
   spec.email         = ["jameshamann@me.com"]
 
-  spec.summary       = %q{A Gem that Parses Adobe Forms}
-  spec.description   = %q{This gem uses Origami and Nokogiri to Parse and return Adobe Forms Content as XML}
+  spec.summary       = %q{A RubyGem that Parses XFA/Acroform PDFs and returns the form's XML contents.}
+  spec.description   = %q{This RubyGem is intended to be used with Adobe XFA/Acroform PDFs and relies heavily on both Nokogiri and Origami. It returns an XML object, that can be used throughout your application. }
   spec.homepage      = "https://github.com/jameshamann/pdf-parser"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
