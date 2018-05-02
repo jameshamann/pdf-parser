@@ -4,7 +4,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/jameshamann/pdf-parser/badge.svg?branch=master)](https://coveralls.io/github/jameshamann/pdf-parser?branch=master)
 [![CircleCI](https://circleci.com/gh/jameshamann/pdf-parser.svg?style=svg)](https://circleci.com/gh/jameshamann/pdf-parser)
 
-This RubyGem is intended to be used with Adobe XFA/Acroform PDFs.
+This RubyGem is intended to be used with Adobe XFA/Acroform PDFs and relies heavily on both  [Nokogiri](https://github.com/sparklemotion/nokogiri) and [Origami](https://github.com/gdelugre/origami)
+
 
 ## Installation
 
@@ -24,6 +25,7 @@ Or install it yourself as:
 
 ## Usage
 
+
 In order to parse a PDF and return it's XML data, you need to use the **.parse** method.
 
 ```ruby
@@ -38,11 +40,20 @@ This will return a [Nokogiri](https://github.com/sparklemotion/nokogiri) XML obj
 
 xml = Pdf::Parser.parse "somedynmaicforms.pdf"
 
-doc.xpath("//AttributeName").text.titleize
+value = xml.xpath("//AttributeName").text
 
 ```
 
+This will return the XML data for the AttributeName so it can be used elsewhere in your app.
 
+If you wish, you can also print the XML to the console by passing an additional arugment, true, when calling the parse method.  
+
+
+```ruby
+
+xml = Pdf::Parser.parse("somedynmaicforms.pdf", true)
+
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -56,6 +67,10 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Changelog
+
+
 
 ## Code of Conduct
 
