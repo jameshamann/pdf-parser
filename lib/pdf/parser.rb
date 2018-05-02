@@ -12,7 +12,7 @@ end
 
 module Pdf
   module Parser
-    def self.parse(pdf)
+    def self.parse(pdf, print_option = "")
       parsed = PDF.read(pdf)
       data = parsed.grep("><xfa:data")
       string = data.to_s
@@ -21,6 +21,7 @@ module Pdf
       final = encoded.gsub('\n','')
       xml = Nokogiri::XML(final).to_xml
       doc = Nokogiri::XML(xml)
+      puts doc if print_option == true
       return doc
     end
   end

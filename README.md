@@ -1,9 +1,10 @@
-# Pdf::Parser
+# Pdf Parser
+###### A Gem to Parse XFA/Acroform PDFs into XML
 
 [![Coverage Status](https://coveralls.io/repos/github/jameshamann/pdf-parser/badge.svg?branch=master)](https://coveralls.io/github/jameshamann/pdf-parser?branch=master)
 [![CircleCI](https://circleci.com/gh/jameshamann/pdf-parser.svg?style=svg)](https://circleci.com/gh/jameshamann/pdf-parser)
 
-A PDF Parsing Gem for Adobe XFA/Acroform PDFs.
+This RubyGem is intended to be used with Adobe XFA/Acroform PDFs.
 
 ## Installation
 
@@ -23,7 +24,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In order to parse a PDF and return it's XML data, you need to use the **.parse** method.
+
+```ruby
+
+Pdf::Parser.parse "somedynmaicforms.pdf"
+
+```
+
+This will return a [Nokogiri](https://github.com/sparklemotion/nokogiri) XML object, which you can then parse using Nokogiri's library.
+
+```ruby
+
+xml = Pdf::Parser.parse "somedynmaicforms.pdf"
+
+doc.xpath("//AttributeName").text.titleize
+
+```
+
 
 ## Development
 
