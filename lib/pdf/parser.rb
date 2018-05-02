@@ -1,9 +1,14 @@
 require "pdf/parser/version"
-require "pdf/parser/xml_forms"
 require 'nokogiri'
 require 'origami'
 
 include Origami
+
+class String
+  def string_between_markers marker1, marker2
+    self[/#{Regexp.escape(marker1)}(.*?)#{Regexp.escape(marker2)}/m, 1]
+  end
+end
 
 module Pdf
   module Parser
