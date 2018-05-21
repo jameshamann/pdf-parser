@@ -11,4 +11,10 @@ RSpec.describe Pdf::Parser do
     expect { Pdf::Parser.parse }.to raise_error(ArgumentError)
   end
 
+  it "successfully parses a simple XFA form" do
+    expect {
+      described_class.parse("spec/support/documents/radiocheckbox_xfa.pdf")
+    }.not_to raise_exception
+  end
+
 end
