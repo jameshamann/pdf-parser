@@ -16,7 +16,7 @@ module Pdf
       parsed = PDF.read(pdf)
       data = parsed.grep("><xfa:data")
       string = data.to_s
-      val = string.string_between_markers('<xfa:data\n>', '</Form\n>')
+      val = string.string_between_markers('<xfa:data\n>', '</xfa:data\n>')
       encoded = val.encode("ASCII-8BIT").force_encoding("utf-8")
       final = encoded.gsub('\n','')
       xml = Nokogiri::XML(final).to_xml
